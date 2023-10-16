@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOT</title>
+    <link rel='shortcut icon' href='.vscode/iot3.webp' />
+    <script src="https://kit.fontawesome.com/16b964eecf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="actionhistory.css">
+</head>
+
+<body>
+    <div class="sub-body2">
+        <div class="container text-center text-white sub-body2">
+            <div class="mainNavigation">
+                <ul>
+                    <li class="navbarli"><a class="navbara" href="http://127.0.0.1:5501/index.html">Homepage</a></li>
+                    <li class="navbarli"><a class="navbara" href="http://127.0.0.1:5501/profile.html">Profile</a></li>
+                    <li class="navbarli"><a class="navbara" href="http://127.0.0.1:5501/dataseeker.html">Data
+                            seekers</a></li>
+                    <li class="navbarli"><a class="navbara" href="http://127.0.0.1:5501/actionhistory.html">Action
+                            history</a></li>
+                </ul>
+            </div>
+            <div class="row pt-5">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4">Action History</h1>
+                </div>
+            </div>
+            <div class="container py-5 sub-body2">
+                <div class="row feature_action">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <div class="row">
+                            <select class="col-1 form-select form-select-sm cb_select" id="value_select1">
+                                <option value=1>ON</option>
+                                <option value=0>OFF</option>
+                            </select>
+                            <select class="col-1 form-select form-select-sm cb_select" id="value_select2">
+                                <option value=1>ON</option>
+                                <option value=0>OFF</option>
+                            </select>
+                            <i class="fas fa-search col-1 thl_submit" id="find_submit1" aria-hidden="true"></i>
+
+                            <div class="col-1" style="margin-left: 54px;"></div>
+
+                            <input class="col-2 my-input-date" id="my-input-date1" type="date">
+                            <input class="col-2 my-input-date" id="my-input-date2" type="date">
+                            <i class="fas fa-search col-1 thl_submit" id="time_submit1" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-7 mx-auto bg-white rounded shadow">
+                        <div class="table-responsive">
+                            <table class="table table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="col-2">ID</th>
+                                        <th scope="col" class="col-3">LED</i></th>
+                                        <th scope="col" class="col-3">STATELED</i></th>
+                                        <th scope="col" class="col-4">Current Time <i
+                                                class="fa-solid fa-sort sort-click" id="sort-time-action"
+                                                style="cursor: pointer;"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="getactiontbody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item" id="prev_click">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only"></span>
+                                    </a>
+                                </li>
+                                <span id="list_li" class="number-page">
+
+                                </span>
+                                <li class="page-item" id="next_click">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="action.js">
+    </script>
+</body>
+
+</html>

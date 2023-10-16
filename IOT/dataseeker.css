@@ -1,0 +1,135 @@
+.table-fixed tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead>tr>th {
+    float: left;
+    position: relative;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+body {
+    background: #74ebd5;
+    background: -webkit-linear-gradient(to right, #74ebd5, #ACB6E5);
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+
+}
+
+#list_li li {
+    display: inline-block;
+}
+
+.page-link {
+    color: black;
+    cursor: pointer;
+}
+
+.subbody1 {
+    position: relative;
+}
+
+/* navbar */
+.mainNavigation {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: 42%;
+    left: -52px;
+    height: 48px;
+}
+
+.navbarli {
+    display: inline-block;
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding: 0 8px;
+}
+
+.navbarli:hover a {
+    color: #DDDDDD;
+}
+
+.navbara {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.sort-click {
+    cursor: pointer;
+}
+
+.cb_select {
+    margin-left: 46px;
+    width: 12%;
+}
+
+.thl_submit {
+    width :4%;
+    background-color: #3b71ca;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+.thl_submit:hover {
+    background-color: rgba(31, 90, 230, 0.3);
+}
+.my-input {
+    width: 10%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.my-input:focus,
+.my-input-date:focus { 
+    outline: none;
+    border: none;
+}
+.my-input-date {
+    width: 16%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#my-input-date1::before {
+    top: 22%;
+    left: 50%;
+    position: absolute;
+    content: "Start:";
+    color: #fff;
+    font-size: large;
+}
+#my-input-date2::before {
+    top: 22%;
+    left: 62%;
+    position: absolute;
+    content: "End:";
+    color: #fff;
+    font-size: large;
+}
+.actived {
+    background-color: #7ae6d7;
+}

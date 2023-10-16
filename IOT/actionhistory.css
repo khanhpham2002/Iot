@@ -1,0 +1,146 @@
+.table-fixed tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead>tr>th {
+    float: left;
+    position: relative;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+.sub-body2 {
+    position: relative;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    min-height: 100vh;
+}
+
+.page-link {
+    color: black;
+    cursor: pointer;
+}
+
+#list_li li {
+    display: inline-block;
+}
+
+/* navbar */
+.mainNavigation {
+    position: fixed;
+    width: 42%;
+    left: -54px;
+    height: 48px;
+    z-index: 1;
+}
+
+.navbarli {
+    display: inline-block;
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding: 0 8px;
+}
+
+.navbarli:hover a {
+    color: #DDDDDD;
+}
+
+.navbara {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* .................... */
+
+.cb_select {
+    width: 8%;
+}
+
+.thl_submit {
+    width: 4%;
+    background-color: #3b71ca;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.thl_submit:hover {
+    background-color: rgba(31, 90, 230, 0.3);
+}
+
+.my-input {
+    width: 10%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.my-input:focus,
+.my-input-date:focus {
+    outline: none;
+    border: none;
+}
+
+.my-input-date {
+    width: 16%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#value_select1 {
+    margin-left: 46px;
+}
+
+#my-input-date1::before {
+    top: 4%;
+    left: 50%;
+    position: absolute;
+    content: "Start:";
+    color: #fff;
+    font-size: large;
+}
+#my-input-date1::after {
+    top: 4%;
+    left: 21%;
+    position: absolute;
+    content: "Led 1:";
+    color: #fff;
+    font-size: large;
+}
+#my-input-date2::before {
+    top: 4%;
+    left: 63%;
+    position: absolute;
+    content: "End:";
+    color: #fff;
+    font-size: large;
+}
+#my-input-date2::after {
+    top: 4%;
+    left: 28%;
+    position: absolute;
+    content: "Led 2:";
+    color: #fff;
+    font-size: large;
+}

@@ -1,0 +1,307 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 595px;
+}
+
+/* container.......................... */
+.container {
+    position: relative;
+    height: 100%;
+    background-color: #ebedef;
+}
+/* sidebar............. */
+.custom-menu {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: -4%;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000; 
+} 
+.custom-menu:hover #sidebar {
+    display: block;
+}
+#sidebar {
+    display: none;
+    width: 210px;
+    height: 219px;
+    left: -16px;
+    top: 40px;
+    background-color: #212121;
+    color: #a6a6a6;
+    position: absolute;
+}
+#sidebar::before {
+    z-index: auto;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 210px;
+    height: 16px;
+    left: -16px;
+    top: -14px;
+}
+.list-unstyled {
+    height: 100%;
+    width: 100%;
+}
+.list-unstyled li {
+    height: 25%;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.list-unstyled li a{
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(255,255,255,.6);
+}
+.list-unstyled li:hover,
+.list-unstyled li:hover a {
+    color: #fff;
+    background: #2f89fc;
+    border-bottom: 1px solid #2f89fc;
+}
+.icon-item {
+    font-size: 16px;
+}
+.div-icon {
+    margin-right: 14px;
+    width: 20px;
+}
+/* header........................... */
+.header {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .col-sm-3 {
+    height: 100%;
+} */
+
+.item {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    background-color: white;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#item_temp {
+    background-color: rgba(229, 83, 83, 1);
+}
+
+#item_humidity {
+    background-color: rgba(50, 31, 219, 1);
+}
+
+#item_light {
+    background-color: rgba(250, 193, 68, 1);
+}
+
+.content_label {
+    word-wrap: break-word;
+    margin-top: 16px;
+}
+
+.footer_chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.light_bulb {
+    height: 82%;
+    width: 100%;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*switch light...................................................*/
+
+.light_bulb input {
+    display: none;
+}
+
+.switch {
+    position: absolute;
+    left: 42%;
+    margin-top: 100px;
+    display: block;
+}
+
+.switch span {
+    top: -18px;
+    position: absolute;
+    width: 60px;
+    height: 34px;
+    border-radius: 16px;
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.round {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.switch>input:checked+span {
+    background-color: #2196F3;
+}
+
+.switch>input:checked+span>.round {
+    transform: translateX(26px);
+}
+
+#bulb {
+    position: absolute;
+    top: 6%;
+    font-size: 70px;
+}
+#bulb1 {
+    position: absolute;
+    top: 6%;
+    font-size: 70px;
+}
+/* switch_fan................................. */
+.fan {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    height: 82%;
+    width: 100%;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+}
+
+.switch2 {
+    position: absolute;
+    left: 42%;
+    margin-top: 100px;
+    display: block;
+}
+
+.fan input {
+    display: none
+}
+
+.fan span {
+    top : -12px;
+    position: absolute;
+    width: 60px;
+    height: 34px;
+    border-radius: 16px;
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.circle {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.switch2>input:checked+span {
+    background-color: #2196F3;
+}
+
+.switch2>input:checked+span>.circle {
+    transform: translateX(26px);
+}
+
+/* ceiling fan.................................. */
+.ceiling_fan {
+    background-color: #ff6d00;
+    height: 18px;
+    width: 18px;
+    margin-bottom: 26px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.ceiling_fan::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 34px;
+    width: 18px;
+    top: 18px;
+    border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%;
+}
+
+.ceiling_fan::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 34px;
+    width: 18px;
+    top: -34px;
+    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    0% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Chart.............................. */
+
+.chart {
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoomout_chart {
+    margin-top: 16px;
+    height: 90%;
+    width: 90%;
+}
